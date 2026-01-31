@@ -1,16 +1,26 @@
 package Pieces;
 
 public class Board {
-    private int numRows, numCols;
+    private int numRows;
+    private int numCols;
     private final PieceType[][] board;
+    private static Board instance;
 
-
-    public Board(int numRows, int numCols) {
+    private Board(int numRows, int numCols) {
         this.numRows = numRows;
         this.numCols = numCols;
         board = new PieceType[numRows][numCols];
     }
 
+    public static Board getInstance(int rows, int cols) {
+        if(instance == null) {
+            synchronized (Board.class) {
+                if(instance == null)
+                    instance = new Board(rows, cols);
+            }
+        }
+        return instance;
+    }
 
     public PieceType[][] getBoard() {
         return board;

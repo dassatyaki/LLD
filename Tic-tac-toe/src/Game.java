@@ -25,7 +25,7 @@ public class Game {
         numRows = 3;
         numCols = 3;
 
-        board = new Board(numRows, numCols);
+        board = Board.getInstance(numRows, numCols);
     }
 
     public void play() {
