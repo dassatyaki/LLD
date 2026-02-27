@@ -16,7 +16,9 @@ public class ParkingLot {
     public static ParkingLot getInstance() {
         if(parkingLot == null) {
             synchronized (ParkingLot.class) {
-                parkingLot = new ParkingLot();
+                if(parkingLot == null) {
+                    parkingLot = new ParkingLot();
+                }
             }
         }
         return parkingLot;

@@ -18,7 +18,6 @@ public class Main {
         Vehicle vehicle1 = vehicleFactory.createVehicle(0, "Car");
         Vehicle vehicle2 = vehicleFactory.createVehicle(1, "Car");
         Vehicle vehicle3 = vehicleFactory.createVehicle(2, "Bike");
-        Vehicle vehicle4 = vehicleFactory.createVehicle(3, "Bike");
         ParkingStrategy parkingStrategy = new FirstParkingStrategy();
 
         Ticket ticket1 = parkingLot.park(vehicle3, 1, parkingStrategy);
