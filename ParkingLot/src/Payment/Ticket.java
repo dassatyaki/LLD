@@ -1,5 +1,6 @@
-package Entity;
+package Payment;
 
+import Entity.ParkingFloor;
 import Vehicles.Vehicle;
 
 public class Ticket {

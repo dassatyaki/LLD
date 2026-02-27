@@ -2,6 +2,7 @@ package Entity;
 
 import ParkingStrategy.ParkingStrategy;
 import Payment.PaymentStrategy;
+import Payment.Ticket;
 import Vehicles.Vehicle;
 import Gates.*;
 import java.util.ArrayList;

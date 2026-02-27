@@ -1,7 +1,7 @@
 package ParkingStrategy;
 
 import Entity.ParkingFloor;
-import Entity.Ticket;
+import Payment.Ticket;
 import Vehicles.Vehicle;
 
 import java.util.List;

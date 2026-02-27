@@ -2,7 +2,7 @@ package Gates;
 
 import Payment.Billing;
 import Payment.PaymentStrategy;
-import Entity.Ticket;
+import Payment.Ticket;
 
 public class ExitGate {
     Billing billing;

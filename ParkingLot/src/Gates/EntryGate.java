@@ -1,7 +1,7 @@
 package Gates;
 
 import Entity.ParkingFloor;
-import Entity.Ticket;
+import Payment.Ticket;
 import ParkingStrategy.ParkingStrategy;
 import Vehicles.Vehicle;
 
