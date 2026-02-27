@@ -1,3 +1,5 @@
+package Vehicles;
+
 public class VehicleFactory {
     public Vehicle createVehicle(int vehicleId, String vehicle) {
         if(vehicle.equals("Car"))

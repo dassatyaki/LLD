@@ -1,3 +1,7 @@
+package Entity;
+
+import Vehicles.VehicleType;
+
 public class ParkingSpot {
     private boolean isOccupied = false;
     private int id;

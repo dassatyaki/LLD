@@ -1,3 +1,5 @@
+package Vehicles;
+
 public enum VehicleType {
     TWO_WHEELER(10.0),
     FOUR_WHEELER(20.0);

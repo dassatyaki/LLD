@@ -1,3 +1,10 @@
+package Gates;
+
+import Entity.ParkingFloor;
+import Entity.Ticket;
+import ParkingStrategy.ParkingStrategy;
+import Vehicles.Vehicle;
+
 import java.util.List;
 
 public class EntryGate {

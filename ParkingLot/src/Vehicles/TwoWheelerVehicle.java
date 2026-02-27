@@ -1,4 +1,6 @@
-public class TwoWheelerVehicle extends Vehicle{
+package Vehicles;
+
+public class TwoWheelerVehicle extends Vehicle {
     public TwoWheelerVehicle(int vehicleId) {
         super(vehicleId, VehicleType.TWO_WHEELER);
     }

@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+package Entity;
+
 import java.util.List;
 
 public class ParkingFloor {

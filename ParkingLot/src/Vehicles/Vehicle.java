@@ -1,3 +1,5 @@
+package Vehicles;
+
 public abstract class Vehicle {
     private int vehicleId;
     private VehicleType vehicleType;

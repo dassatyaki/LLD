@@ -1,3 +1,9 @@
+package Entity;
+
+import ParkingStrategy.ParkingStrategy;
+import Payment.PaymentStrategy;
+import Vehicles.Vehicle;
+import Gates.*;
 import java.util.ArrayList;
 import java.util.List;
 

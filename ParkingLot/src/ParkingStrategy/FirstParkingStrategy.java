@@ -1,6 +1,13 @@
+package ParkingStrategy;
+
+import Entity.ParkingFloor;
+import Entity.ParkingSpot;
+import Entity.Ticket;
+import Vehicles.Vehicle;
+
 import java.util.List;
 
-public class FirstParkingStrategy implements ParkingStrategy{
+public class FirstParkingStrategy implements ParkingStrategy {
     @Override
     public Ticket parkVehicle(List<ParkingFloor> floors, Vehicle vehicle, int entryTime) {
         for(ParkingFloor floor : floors) {

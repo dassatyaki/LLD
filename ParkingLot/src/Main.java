@@ -1,8 +1,14 @@
+import Entity.*;
+import ParkingStrategy.*;
+import Payment.*;
+import Vehicles.*;
+
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         ParkingLot parkingLot = ParkingLot.getInstance();
+
         ParkingSpot spot1 = new ParkingSpot(0, VehicleType.FOUR_WHEELER);
         ParkingSpot spot2 = new ParkingSpot(1, VehicleType.FOUR_WHEELER);
         ParkingSpot spot3 = new ParkingSpot(0, VehicleType.FOUR_WHEELER);

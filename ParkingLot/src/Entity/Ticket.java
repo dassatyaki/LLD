@@ -1,3 +1,7 @@
+package Entity;
+
+import Vehicles.Vehicle;
+
 public class Ticket {
     private int entryTime;
     private ParkingFloor floor;

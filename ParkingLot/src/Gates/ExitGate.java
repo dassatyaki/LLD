@@ -1,3 +1,9 @@
+package Gates;
+
+import Payment.Billing;
+import Payment.PaymentStrategy;
+import Entity.Ticket;
+
 public class ExitGate {
     Billing billing;
     PaymentStrategy paymentStrategy;
