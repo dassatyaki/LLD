@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        WarehouseController warehouseController = new WarehouseController();
+        WarehouseController warehouseController = WarehouseController.getInstance();
 
         Warehouse warehouse1 = new Warehouse(0);
         Warehouse warehouse2 = new Warehouse(1);
