@@ -5,9 +5,11 @@ public class Main {
         Warehouse warehouse1 = new Warehouse(0);
         Warehouse warehouse2 = new Warehouse(1);
 
-        Product tomato = new Product(0, "Tomato", "Vegetables", 10, 20);
-        Product onion = new Product(1, "Onion", "Vegetables", 20, 30);
-        Product facewash = new Product(0, "Facewash", "Hygiene", 100, 5);
+        ProductFactory productFactory = new ProductFactory();
+
+        Product tomato = productFactory.createProduct("Vegetables",0, "Tomato",  10, 20);
+        Product onion = productFactory.createProduct("Vegetables", 1,  "Onion", 20, 30);
+        Product facewash = productFactory.createProduct("Electronics", 2, "PS5", 50000, 2);
 
         warehouse1.addProduct(tomato);
         warehouse1.addProduct(onion);
@@ -25,14 +27,15 @@ public class Main {
         userController.addUser(user1);
         userController.addUser(user2);
 
-        user1.cart.addProduct(new Product(0, "Tomato", "Vegetables", 10, 2));
-        user1.cart.addProduct(new Product(1, "Onion", "Vegetables", 10, 40));
-        user1.cart.addProduct(new Product(2, "Cauliflower", "Vegetables", 20, 1));
-
-        user2.cart.addProduct(new Product(0, "Tomato", "Vegetables", 10, 25));
-        user2.cart.addProduct(new Product(1, "Onion", "Vegetables", 10, 10));
-
         OrderController orderController = new OrderController();
+
+        user1.cart.addProduct(productFactory.createProduct("Vegetables", 0, "Tomato", 10, 2));
+        user1.cart.addProduct(productFactory.createProduct("Vegetables", 1, "Onion", 20, 10));
+        user1.cart.addProduct(productFactory.createProduct("Electronics", 2, "PS5", 50000, 1));
+
+        user2.cart.addProduct(productFactory.createProduct("Vegetables", 1, "Onion", 20, 20));
+        user2.cart.addProduct(productFactory.createProduct("Electronics", 2, "PS5", 50000, 2));
+
         orderController.createOrder(user1, nearestWarehouse, new CashPayment(), "Bangalore");
         orderController.createOrder(user2, nearestWarehouse, new CardPayment(), "Chennai");
     }
