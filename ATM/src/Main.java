@@ -15,10 +15,13 @@ public class Main {
         Card card = new Card("11111", bankAccount, 1234);
         User user = new User(0, card);
 
-        AtmState atmState = atm.getAtmState();
-        atmState.insertCard(atm, card);
-        atmState.authenticatePin(atm, card, 1234);
-        atmState.selectOperation(atm, Operation.VIEW_BALANCE, card, 1234);
-        atmState.viewBalance(atm, card);
+        atm.getAtmState().insertCard(atm, card);
+        atm.getAtmState().authenticatePin(atm, card, 1234);
+        atm.getAtmState().selectOperation(atm, Operation.VIEW_BALANCE, card, 1234);
+        atm.getAtmState().viewBalance(atm, card);
+        atm.getAtmState().selectOperation(atm, Operation.CHANGE_PIN, card, 1234);
+        atm.getAtmState().changePin(atm, card, 12345);
+        atm.getAtmState().selectOperation(atm, Operation.WITHDRAW_AMOUNT, card, 1234);
+        atm.getAtmState().withdrawAmount(atm, card, 1200);
     }
 }
