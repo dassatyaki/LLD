@@ -10,8 +10,9 @@ public class CashWithdrawalState extends AtmState{
             System.out.println("Cash not available in ATM");
         }
         else {
-            CashWithdrawalProcessor cashWithdrawalProcessor = new FiveHundredProcessor();
-            cashWithdrawalProcessor.process(atmMachine, amount);
+            CashWithdrawController cashWithdrawController = new CashWithdrawController();
+            cashWithdrawController.setNextProcessor();
+            cashWithdrawController.fiveHundredProcessor.process(atmMachine, amount);
             card.getAccount().setBalance(card.getAccount().getBalance() - amount);
             atmMachine.setAtmState(new IdleState());
         }

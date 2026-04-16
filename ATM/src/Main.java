@@ -8,9 +8,6 @@ public class Main {
         inventory.addNotes(Note.FIFTY, 500);
         inventory.addNotes(Note.ONE, 1000);
 
-        CashWithdrawController cashWithdrawController = new CashWithdrawController();
-        cashWithdrawController.setNextProcessor();
-
         BankAccount bankAccount = new BankAccount("12345", 10000);
         Card card = new Card("11111", bankAccount, 1234);
         User user = new User(0, card);

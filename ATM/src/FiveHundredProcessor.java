@@ -9,12 +9,12 @@ public class FiveHundredProcessor extends CashWithdrawalProcessor{
         int numQuantity = inventory.getFiveHundredNotes();
 
         if(quantity <= numQuantity) {
-            System.out.println(quantity + "five hundred notes issued");
+            System.out.println(quantity + " five hundred notes issued");
             inventory.deductNotes(quantity, Note.FIVE_HUNDRED);
             nextWithdrawalProcessor.process(atmMachine, remainder);
         }
         else {
-            System.out.println(numQuantity + "five hundred notes issued");
+            System.out.println(numQuantity + " five hundred notes issued");
             inventory.deductNotes(numQuantity, Note.FIVE_HUNDRED);
             nextWithdrawalProcessor.process(atmMachine, remainder + (quantity - numQuantity) * 500);
         }
